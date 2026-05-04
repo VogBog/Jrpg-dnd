@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Prefabs
+  m_EditorClassIdentifier: 
+  m_GroupName: Prefabs
+  m_GUID: b30ba6188e9e8c049a97adadaa088f1b
+  m_SerializeEntries:
+  - m_GUID: 01e197076302b6d409a96fe78e7db713
+    m_Address: Assets/Game/Prefabs/Models/Weapons/BattleAxe.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 081745b0bbda5ef4bb27f80d4a05fb9d
+    m_Address: Assets/Game/Prefabs/UI/Battle/AnalyzeQueueItem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ac3a3179c58cc14485b6a42971697a1
+    m_Address: Assets/Game/Prefabs/UI/Battle/CharacterResourcesUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ce3e0cee25902d419c4df6faedc67b2
+    m_Address: Assets/Game/Prefabs/UI/Battle/MarkLevelChooseItem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1732ab3f37ef8834c8082e729c088aed
+    m_Address: Assets/Game/Prefabs/Effects/Visual/TextPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - VisualEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3731247b2fbf9424e98b54aebeb0394e
+    m_Address: Assets/Game/Prefabs/UI/Battle/BattleActions.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37f953c544e9e8249935c35fd2f53c98
+    m_Address: Assets/Game/Prefabs/UI/Battle/InitiativeTracker.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d43d6873de192f4cbb30c0301615ba6
+    m_Address: Assets/Game/Prefabs/UI/Battle/TargetChooserItem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 409384176d5b7af41a8d9f9095f79191
+    m_Address: Assets/Game/Prefabs/UI/Battle/ItemView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40b169f141f3faa4abe56a43b9b1891a
+    m_Address: Assets/Game/Prefabs/UI/Battle/StatColumn.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 456989b55694e2f45abefab62edb664b
+    m_Address: Assets/Game/Prefabs/UI/Battle/CharacterAnalyzePage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fbfb8941a5570c4e8c62cf316310c83
+    m_Address: Assets/Game/Prefabs/UI/Battle/CharacterAction.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68e6c18ca3c2dc44c88aa7594c4575a9
+    m_Address: Assets/Game/Prefabs/Models/Weapons/Dagger.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6aad4e06fd634fc48a5253a991a99830
+    m_Address: Assets/Game/Prefabs/Models/Weapons/Hammer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6be663973bcf3bf40baffcd6cf0ec3e9
+    m_Address: Assets/Game/Prefabs/BattleUnits/Fighter1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73cb97e101bb416499ec52e77aebcb72
+    m_Address: Assets/Game/Prefabs/Effects/Visual/SaveThrowEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7639fb30e665d764190835a764392650
+    m_Address: Assets/Game/Prefabs/UI/Battle/TargetChooser.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b7689ab1e97a1f409255406fa763b37
+    m_Address: Assets/Game/Prefabs/Effects/Visual/Projectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7cdbae77df25b764bb403f1ad3381b5c
+    m_Address: Assets/Game/Prefabs/Models/Weapons/GreatSword.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e64997c8d6b95746810e7f4bdd508ee
+    m_Address: Assets/Game/Prefabs/BattleUnits/BaseGoblin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86a0b09cab51af749b7f896c4b601aba
+    m_Address: Assets/Game/Prefabs/UI/Battle/CharacterResourceItemView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d5690295da213144a83c411a98f06b7
+    m_Address: Assets/Game/Prefabs/BattleUnits/PlayerTest.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 904ccbcd5562ced4ca47426feb5435c5
+    m_Address: Assets/Game/Prefabs/UI/Battle/StatusEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - StatusEffect
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e28a19b11c61d045a7e5b4e7b487033
+    m_Address: Assets/Game/Prefabs/BattleUnits/WitchGoblin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b42da138cfd1cf14986c76cca79d6628
+    m_Address: Assets/Game/Prefabs/UI/Battle/StatusEffectsIndicator.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b88c460f9968f9a45a233e525c4cc12a
+    m_Address: Assets/Game/Prefabs/BattleUnits/Fighter2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd4959e5a417bf44592fa77d2fa17409
+    m_Address: Assets/Game/Prefabs/UI/Battle/ReactionView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2cbeddd2b0d932428afef5461872ce2
+    m_Address: Assets/Game/Prefabs/Models/Weapons/Sword.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8a549c914ba1c34e9af9afac5c357b3
+    m_Address: Assets/Game/Prefabs/BattleUnits/Cleric.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eedfc1a63c2645b47980c3ab826a6791
+    m_Address: Assets/Game/Prefabs/BattleUnits/BattleUnit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efeeb576d1f7c764c80e762be740cea0
+    m_Address: Assets/Game/Prefabs/Models/Weapons/SimpleAxe.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f16109555e6e8a54bba4cc2584a7af38
+    m_Address: Assets/Game/Prefabs/Effects/Visual/SaveThrowVisualEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - VisualEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fca867fad0fe29046894aabcae533c44
+    m_Address: Assets/Game/Prefabs/UI/Battle/Option.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 63a18dae2aada014fa96da7593e6683b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 58cbdfa632dd2fc4dbb6b4196a3ab24e, type: 2}

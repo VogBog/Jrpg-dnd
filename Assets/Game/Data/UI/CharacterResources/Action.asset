@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da94882b83284aa69e3026dd4977f5e0, type: 3}
+  m_Name: Action
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField:
+    _assemblyDefinitionName: Game.Scripts.Characters.CharacterResources.DefaultResources.ActionResource,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _label: ActionResource
+  <Color>k__BackingField: {r: 0.12215203, g: 0.5754717, b: 0.17849685, a: 1}
+  <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

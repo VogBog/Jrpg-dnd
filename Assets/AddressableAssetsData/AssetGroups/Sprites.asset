@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sprites
+  m_EditorClassIdentifier: 
+  m_GroupName: Sprites
+  m_GUID: 753c27a5559c81a40bef2bdb8f821543
+  m_SerializeEntries:
+  - m_GUID: 063682ae26bdd1b45b3485d78e2664d3
+    m_Address: Assets/Game/Sprites/Actions/secondWish.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20ead3d9ba14f644299de2c0ad5555f7
+    m_Address: Assets/Game/Sprites/Damage/miniLighting.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26709909014d1a14b89feeab3f1f10af
+    m_Address: Assets/Game/Sprites/Spells/Contrips/holyFire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 276b4972d5764084da30bcc94d303158
+    m_Address: Assets/Game/Sprites/CharacterResources/whiteStar.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27bda671d060bab48b7bcc0471f15150
+    m_Address: Assets/Game/Sprites/CharacterResources/whiteTriangle.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28f9f3d15969ae040ba820c0975ed2e0
+    m_Address: Assets/Game/Sprites/Damage/miniThunder.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a67ea0768c9e1346aeda11d4bb21225
+    m_Address: Assets/Game/Sprites/Actions/protection.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c9aeb7b60404614191376ebf2f70ffd
+    m_Address: Assets/Game/Sprites/Damage/miniHammer.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e5a71872da73554e86e9af43e3b76c8
+    m_Address: Assets/Game/Sprites/Spells/Level 2/bless.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c4e27eea6661ed4b97536c973882414
+    m_Address: Assets/Game/Sprites/CharacterResources/whiteCircle.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d09f184d81591448bc5e4f32652ad86
+    m_Address: Assets/Game/Sprites/Spells/Level 1/healingWord.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68d9286895e304943a7922166513f123
+    m_Address: Assets/Game/Sprites/Spells/Level 2/shelter.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69bb41860783b324e94a5ae72a38bd53
+    m_Address: Assets/Game/Sprites/CharacterResources/slot1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a7db74dbd8c2c94591a6ed6f358f60d
+    m_Address: Assets/Game/Sprites/Damage/miniArow.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dcee762b4bb07346a46dcb4186943ef
+    m_Address: Assets/Game/Sprites/Damage/miniRadiance.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72fbb404ade1aa5498e95ab476fdc6c1
+    m_Address: Assets/Game/Sprites/Spells/Contrips/guidance.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a872dd731e23ad4198a62f8851f12fd
+    m_Address: Assets/Game/Sprites/UIIcons/heart.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d88449ad93d63f4ba3b4e9e30fdfac8
+    m_Address: Assets/Game/Sprites/Actions/dodge.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87bd2776f620e6846a851b5c2704b61f
+    m_Address: Assets/Game/Sprites/Actions/actionSurge.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9661e50299229b543a7fc503074e5261
+    m_Address: Assets/Game/Sprites/CharacterResources/slot3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a5c6187d5b11c844a90e5a56018d250
+    m_Address: Assets/Game/Sprites/Spells/Level 1/deal damage.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9afab5ec569744e458538512eda7ab41
+    m_Address: Assets/Game/Sprites/Actions/weaponAttack.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3f0363459dd68b41ab0d3c129508094
+    m_Address: Assets/Game/Sprites/Spells/Level 1/guidanceRay.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9fde0b308909ed4fb704a6d9473c884
+    m_Address: Assets/Game/Sprites/CharacterResources/whiteSquare.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7d4016a58b32df44945d5a673bdf189
+    m_Address: Assets/Game/Sprites/Spells/Contrips/maliciousMockery.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9450ac524ea33f49a8ea17b16841211
+    m_Address: Assets/Game/Sprites/Damage/miniSword.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbd81ac43c345bd4d8323b3cf780f855
+    m_Address: Assets/Game/Sprites/Spells/Enemies/revengeOfTheSmallIcon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de6c5eca7c47e7549bf5617960dd64af
+    m_Address: Assets/Game/Sprites/Actions/championCrits.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e66268fd6a2059548879700a2059ab2e
+    m_Address: Assets/Game/Sprites/CharacterResources/slot2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e79cc996bb035384c844c8a2f1e840ae
+    m_Address: Assets/Game/Sprites/Damage/miniFire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e830c907a1084c34ea32d974478b6261
+    m_Address: Assets/Game/Sprites/Containers/cellsUi.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed09b63ce0af1c7429858fe7b14a05ca
+    m_Address: Assets/Game/Sprites/Actions/defence.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efb05b2d71fd0ad4a873d973da3eba4f
+    m_Address: Assets/Game/Sprites/Damage/miniPoison.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f035fb39b4e359547bde387e3d7496fb
+    m_Address: Assets/Game/Sprites/Damage/miniForce.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4c29c82be308954bb3f227d3db56ad9
+    m_Address: Assets/Game/Sprites/Damage/miniNecro.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7ff4781645e2444c9f78b9fc936ed03
+    m_Address: Assets/Game/Sprites/Damage/miniAcid.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8a48440f4ff7ed4b8f5aa6e84b502ce
+    m_Address: Assets/Game/Sprites/Damage/miniCold.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb2f4216ebfb30d4f88aebed4645edba
+    m_Address: Assets/Game/Sprites/Damage/miniPsycho.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 63a18dae2aada014fa96da7593e6683b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cb3ef1c4ead15da4f81eb1183126bce3, type: 2}

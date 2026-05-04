@@ -1,0 +1,407 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  m_GroupName: Data
+  m_GUID: bbbf579d5b0801546af493337f333915
+  m_SerializeEntries:
+  - m_GUID: 020bd65c68d02934592ef2ba126ba846
+    m_Address: Assets/Game/Data/CharacterResources/BonusAction.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0825b5bf4e57bfa41a48c3b4529d4399
+    m_Address: DamageTypes/Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12e5f7dce8d366044a2b3a937d49cb98
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/Hands.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 193c3a0dc358d5946a0a9206c11b1042
+    m_Address: Assets/Game/Data/CharacterResources/FighterResources/ActionSurgeResource.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 254e1c593ef0aaa4c8a4e17ef6df555f
+    m_Address: Assets/Game/Data/StatusEffects/Contrips/GuidanceEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26189b0c40ae5b346a65b6afba0048a6
+    m_Address: Assets/Game/Data/CharacterResources/Reaction.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 279bf44c923058b4e85adb66e474e713
+    m_Address: Assets/Game/Data/CharacterResources/SpellSlot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 284403ad943c6b74fb53c19ae72a82ec
+    m_Address: Assets/Game/Data/Actions/FighterActions/SecondWind.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a77548d9a08a7c43aeaddf0c087bbc7
+    m_Address: Assets/Game/Data/Animations/Attack/GreatSword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bd3ad3f568c3cb4b86957fd6af8b778
+    m_Address: Assets/Game/Data/Spells/Bless.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32b3ecdaab9e896468213c836dc43980
+    m_Address: Assets/Game/Data/EnemyActions/RevengeOfTheSmallAction.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 336c91071430b8848a48252c8410299b
+    m_Address: Assets/Game/Data/DamageDealing/WeaponTypes/Sword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ac079028b702db4f87e86b0f58a0ae9
+    m_Address: Assets/Game/Data/Animations/Attack/Magic.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f40cee1af6ac2b42b4d766201bbebac
+    m_Address: Assets/Game/Data/StatusEffects/Spells/GuidingBoltEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 406e1c30506cf29418f5de1fe88a6537
+    m_Address: DamageTypes/Necrotic.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40eec09d309ded842a888fb794e80107
+    m_Address: Assets/Game/Data/CharacterResources/DefaultResourcesList.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 443e44b6391feb24f9c6de3be0d34344
+    m_Address: DamageTypes/Thunder.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a4f501b9b137e04fbc9bed4d99da1b5
+    m_Address: Assets/Game/Data/CharacterResources/FighterResources/FighterResourceList.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5475ab0b7cf6d41419175bd307d275c0
+    m_Address: Assets/Game/Data/StatusEffects/Contrips/MaliciousMockeryEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5607093f33e3a5646b658879e905cf25
+    m_Address: Assets/Game/Data/Spells/Guidance.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a74c3a9f67706b41a049d705e373f4e
+    m_Address: Assets/Game/Data/Spells/GuidingBolt.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fd9102cd72c1134d9dff8fc3648415c
+    m_Address: Assets/Game/Data/Animations/Attack/Arrow.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65b5744f146a4034f8bd46b2a9400141
+    m_Address: DamageTypes/Poison.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66b2b1125d79bac46aca1ba943a5565b
+    m_Address: Assets/Game/Data/Actions/AttackAction.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74874290b1f767348af0b5162b869999
+    m_Address: DamageTypes/Acid.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fdb440a042eed744a487ebecdf5e0b9
+    m_Address: Assets/Game/Data/Animations/Idle/Default.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8496af3ae2acb0c42924bbd459b415e2
+    m_Address: Assets/Game/Data/Actions/FighterActions/DefenseFightingStyle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86c1a67479ec4b84ea68f0cc05e465f2
+    m_Address: DamageTypes/Piercing.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 897dae2e490ea434cae74b38a77fd069
+    m_Address: Assets/Game/Data/DamageDealing/WeaponTypes/Hands.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a880dfc5f22ed14f88ad165c7bba77a
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/GreatSword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fb65b57e9086324b88c56b95f0d8d7e
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/Dagger.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 953c1f334fb2dc442a25b7bdad57a372
+    m_Address: DamageTypes/Lighting.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 968c9265926a78a4c9d34a0adf941112
+    m_Address: Assets/Game/Data/Animations/Attack/Hands.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97b47ce1abc5ad845b8735e2621cd17c
+    m_Address: DamageTypes/Crushing.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e11225231b994e4689d478d8b806ef6
+    m_Address: Assets/Game/Data/Animations/Attack/AxeJump.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e479fd5c42d092449e9b1798db47259
+    m_Address: DamageTypes/Slashing.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a043924be20b1884ebf09c8e239187fe
+    m_Address: Assets/Game/Data/CharacterResources/FighterResources/SecondWishResource.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a598b9aa2314bb844b508ade42cbdf96
+    m_Address: Assets/Game/Data/StatusEffects/Contrips/BlessEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8b3c889cb08fda4da40f7853172222c
+    m_Address: Assets/Game/Data/Actions/FighterActions/ActionSurge.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa355eeac214cc94a92eca47a8a0a96e
+    m_Address: Assets/Game/Data/Animations/Attack/Sword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad0efd77774fa8f4098154ab0d50b433
+    m_Address: Assets/Game/Data/CharacterResources/ClericResources/ClericResources.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b47a894cbccb29a4fa2c61db5c9a2c91
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/SimpleAxe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4fc92ba814464c419d490613a4d8b8f
+    m_Address: Assets/Game/Data/EnemyActions/RevengeOfTheSmallStatusEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b85f6a9e7f2c4c844b6c0bcd0dd05781
+    m_Address: Assets/Game/Data/StatusEffects/Actions/MaliciousMockeryEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StatusEffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc40ef8831748034fbbfe7b3609c3305
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/BattleAxe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bec7e982f5dc98e4faae38204a7b6759
+    m_Address: DamageTypes/Cold.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c46625892f272864a9c8dd3ceeaf7f06
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/Sword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7465ac1364a2e84596d7e3ff35e95d4
+    m_Address: DamageTypes/Psycho.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c89e61ab9b81dc9489521c0686027d12
+    m_Address: Assets/Game/Data/Spells/DealingDamage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc50c9a7966a3b440bb10f9541767436
+    m_Address: Assets/Game/Data/DamageDealing/Weapons/Hammer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponItem
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2ec6d18cd83efa4ab441df765a865b9
+    m_Address: Assets/Game/Data/Actions/FighterActions/FighterCriticalRolls.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc7a3ae1b20d52b4698a97088a7a503d
+    m_Address: Assets/Game/Data/Actions/DodgeAction.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: deba70ec5ad6569408728e6355292f07
+    m_Address: Assets/Game/Data/Animations/Idle/GreatSword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e058b37853b9d58428f92f1fb68c7a84
+    m_Address: Assets/Game/Data/Spells/TestSpell.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4c7e3ff97b29f2429132b9bf097fb54
+    m_Address: Assets/Game/Data/Actions/FighterActions/Protection.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e815de51036a2b94aa9be29a457283e7
+    m_Address: DamageTypes/Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8e6c34205f82714eaa39f23c8b5afeb
+    m_Address: Assets/Game/Data/UI/CharacterResources/BonusAction.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterResource
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1c8a1c3cd7ba974c9031331100e556d
+    m_Address: Assets/Game/Data/EnemyActions/DodgeBonus.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f47ce9a7eb6b048409f623f17a78895f
+    m_Address: DamageTypes/Radiance.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f955557f2e0dea9458c7c162394f078b
+    m_Address: Assets/Game/Data/Spells/HealingWord.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc1d2e831f26dd2409039a99fcd03772
+    m_Address: Assets/Game/Data/CharacterResources/Action.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Battle
+    - CharacterResource
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc94a1f17acb8346b3c21d2096e65ee
+    m_Address: Assets/Game/Data/Spells/HolyFire.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffe95dfb6de23904cacf46d14aadc2e4
+    m_Address: Assets/Game/Data/Animations/Idle/Monk.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AnimationData
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 63a18dae2aada014fa96da7593e6683b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 83b4baa7a184a8f4c81111f50488a524, type: 2}

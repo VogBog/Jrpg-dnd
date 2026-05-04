@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6816028513787416472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5825788776894229793}
+  - component: {fileID: 5971975283047966058}
+  m_Layer: 0
+  m_Name: Bless
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5825788776894229793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816028513787416472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5971975283047966058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816028513787416472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a408c72eb64cfa92fead5a0af4ae48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteReference:
+    m_AssetGUID: 2e5a71872da73554e86e9af43e3b76c8
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <Name>k__BackingField: Bless
+  <Description>k__BackingField: Choose 4 allies. All of you will have a +1d4 to attack
+    rolls and save throws in the next 3 rounds
+  _useResources:
+  - m_AssetGUID: fc1d2e831f26dd2409039a99fcd03772
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _useMarkedResources:
+  - <DataReference>k__BackingField:
+      m_AssetGUID: 279bf44c923058b4e85adb66e474e713
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    MarkValue: 2
+  _targetsCount: 4
+  _teamMask:
+    Allies: 1
+    Enemies: 0
+  _isAttackRoll: 0
+  _onAttacked:
+    DealDamage: 0
+    HalfIfSuccessSaveThrow: 0
+    Damage:
+      _values:
+      - Dices:
+          Count: 3
+          Dice: 8
+        DamageType:
+          m_AssetGUID: f47ce9a7eb6b048409f623f17a78895f
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        DamageBonus: 0
+    SetStatusEffect: 1
+    StatusEffect:
+      m_AssetGUID: 3f40cee1af6ac2b42b4d766201bbebac
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    StatusEffectEndTime: 1
+    StatusEffectDuration: 3
+    Heal: 0
+    HealParameters:
+      Count: 0
+      Dice: 0
+  _saveThrow: 0
+  _saveThrowStat: 4
+  _onSaveThrowFailed:
+    DealDamage: 1
+    HalfIfSuccessSaveThrow: 0
+    Damage:
+      _values:
+      - Dices:
+          Count: 1
+          Dice: 4
+        DamageType:
+          m_AssetGUID: c7465ac1364a2e84596d7e3ff35e95d4
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        DamageBonus: 0
+    SetStatusEffect: 1
+    StatusEffect:
+      m_AssetGUID: 5475ab0b7cf6d41419175bd307d275c0
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    StatusEffectEndTime: 2
+    StatusEffectDuration: 0
+    Heal: 0
+    HealParameters:
+      Count: 0
+      Dice: 0
+  _always:
+    DealDamage: 0
+    HalfIfSuccessSaveThrow: 0
+    Damage:
+      _values: []
+    SetStatusEffect: 1
+    StatusEffect:
+      m_AssetGUID: a598b9aa2314bb844b508ade42cbdf96
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    StatusEffectEndTime: 1
+    StatusEffectDuration: 3
+    Heal: 0
+    HealParameters:
+      Count: 0
+      Dice: 0

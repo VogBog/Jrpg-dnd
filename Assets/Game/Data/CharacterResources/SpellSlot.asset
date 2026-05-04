@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18262ac633e849199fd93270decd3db1, type: 3}
+  m_Name: SpellSlot
+  m_EditorClassIdentifier: 
+  <IsRestoreInNextTurn>k__BackingField: 0
+  <Color>k__BackingField: {r: 0.31185475, g: 0.7564259, b: 0.9056604, a: 1}
+  <Icon>k__BackingField: {fileID: 21300000, guid: b9fde0b308909ed4fb704a6d9473c884, type: 3}
+  <Variants>k__BackingField:
+  - <MarkValue>k__BackingField: 1
+    <Icon>k__BackingField: {fileID: 21300000, guid: 69bb41860783b324e94a5ae72a38bd53, type: 3}
+  - <MarkValue>k__BackingField: 2
+    <Icon>k__BackingField: {fileID: 21300000, guid: e66268fd6a2059548879700a2059ab2e, type: 3}
+  - <MarkValue>k__BackingField: 3
+    <Icon>k__BackingField: {fileID: 21300000, guid: 9661e50299229b543a7fc503074e5261, type: 3}

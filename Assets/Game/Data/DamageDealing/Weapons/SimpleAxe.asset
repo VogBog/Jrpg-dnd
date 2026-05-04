@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690bacd1663476b918c00e81e24f50d, type: 3}
+  m_Name: SimpleAxe
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Simple Axe
+  <Model>k__BackingField:
+    m_AssetGUID: efeeb576d1f7c764c80e762be740cea0
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <AttackAnimation>k__BackingField:
+    m_AssetGUID: aa355eeac214cc94a92eca47a8a0a96e
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <IdleAnimation>k__BackingField:
+    m_AssetGUID: 7fdb440a042eed744a487ebecdf5e0b9
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <Tags>k__BackingField:
+  - _reference:
+      m_AssetGUID: 336c91071430b8848a48252c8410299b
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    Value: {fileID: 0}
+  <UsingStats>k__BackingField: 00000000
+  <DamageList>k__BackingField:
+    _values:
+    - Dices:
+        Count: 1
+        Dice: 8
+      DamageType:
+        m_AssetGUID: 9e479fd5c42d092449e9b1798db47259
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 0
+      DamageBonus: 0
+  <DamageBonus>k__BackingField: 0
+  <AttackBonus>k__BackingField: 0
