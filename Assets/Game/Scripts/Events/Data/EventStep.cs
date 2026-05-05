@@ -4,6 +4,7 @@ namespace Game.Scripts.Events.Data
     {
         ChangeValuesAndSetEffects,
         CancelEffects,
-        SeeResults
+        SeeResults,
+        FinishGame
     }
 }

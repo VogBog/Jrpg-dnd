@@ -47,7 +47,7 @@ namespace Game.Scripts.Battle.Starter
             await _summoner.SummonAsync(playerReference2.GetCopy(), false, CancellationToken.None);
             await _summoner.SummonAsync(playerReference3.GetCopy(), false, CancellationToken.None);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 await _summoner.SummonAsync(enemyReference.GetCopy(), false, CancellationToken.None);
             }
