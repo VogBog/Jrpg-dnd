@@ -749,7 +749,7 @@ MonoBehaviour:
   _battleAnimationsPlayer: {fileID: 328734181}
   _popupWindow: {fileID: 910917305}
   _baseSpellAnimations: {fileID: 328734183}
-  _cameraController: {fileID: 446497381}
+  _cameraController: {fileID: 2131209149}
 --- !u!114 &328734177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,8 +1045,6 @@ GameObject:
   - component: {fileID: 446497378}
   - component: {fileID: 446497377}
   - component: {fileID: 446497380}
-  - component: {fileID: 446497381}
-  - component: {fileID: 446497382}
   m_Layer: 0
   m_Name: OtherSystems
   m_TagString: Untagged
@@ -1126,31 +1124,6 @@ MonoBehaviour:
   _failureColor: {r: 0.9622642, g: 0.06808472, b: 0.06808472, a: 1}
   _rollingColor: {r: 0.24301353, g: 0.31803623, b: 0.4056604, a: 1}
   _yOffset: 1.5
---- !u!114 &446497381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446497376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53412aa539d944e6acf5eed2a4144a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetsGroup: {fileID: 941473762}
---- !u!114 &446497382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446497376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebabbe3b4d84ebc80d38984cb168b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &483751408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,6 +5485,8 @@ GameObject:
   - component: {fileID: 2131209145}
   - component: {fileID: 2131209148}
   - component: {fileID: 2131209144}
+  - component: {fileID: 2131209149}
+  - component: {fileID: 2131209150}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: MainCamera
@@ -5694,6 +5669,31 @@ MonoBehaviour:
   FovRange: {x: 1, y: 100}
   DollyRange: {x: -100, y: 100}
   OrthoSizeRange: {x: 1, y: 1000}
+--- !u!114 &2131209149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131209143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f72f004f7a43a8ac34ad718ba239bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetsGroup: {fileID: 941473762}
+--- !u!114 &2131209150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131209143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebabbe3b4d84ebc80d38984cb168b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4738417358470646810
 PrefabInstance:
   m_ObjectHideFlags: 0

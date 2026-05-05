@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Game.Scripts.Battle.CameraController.Data
 {
-    public struct SetCameraTargetsCommand
+    public readonly struct SetCameraTargetsCommand
     {
-        public IEnumerable<Transform> Follow;
-        public IEnumerable<Transform> Targets;
+        public readonly List<Transform> Follow;
+        public readonly List<Transform> Targets;
 
-        public SetCameraTargetsCommand(IEnumerable<Transform> follow, IEnumerable<Transform> targets)
+        public SetCameraTargetsCommand(List<Transform> follow, List<Transform> targets)
         {
             Follow = follow;
             Targets = targets;
