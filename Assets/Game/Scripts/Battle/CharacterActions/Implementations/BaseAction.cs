@@ -152,7 +152,10 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
                 if (maxUseLevel < markedResource.MarkValue)
                     return false;
                 if (maxUseLevel == markedResource.MarkValue)
+                {
+                    list.Add((markedResource, markedResource.MarkValue));
                     continue;
+                }
                 
                 var command = new ChooseMarkLevelCommand(ResourcesHolder, markedResource.Data, markedResource.MarkValue);
                 var (success, level) = await MarkLevelChooser.ChooseMarkLevel(command, ct);
