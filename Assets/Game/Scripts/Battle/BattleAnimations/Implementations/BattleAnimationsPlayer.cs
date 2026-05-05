@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Helpers.DOTweenExtensions;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
+using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.DamageDealing.Health.Events;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Battle.UnitsTeam;
@@ -23,6 +24,7 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
         [Inject] private IAsyncOperationScope _scope;
         [Inject] private IInitiativeQueue _queue;
         [Inject] private IEventBus _bus;
+        [Inject] private ICameraController _cameraController;
 
         [SerializeField] private AssetReferenceT<AttackAnimationData> _magicAnimationReference;
         private AttackAnimationData _magicAnimation = null;
@@ -48,6 +50,11 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             Func<CancellationToken, UniTask> dealDamageEvent,
             CancellationToken ct)
         {
+            _cameraController.SetTargets(
+                defender.GameObject.transform,
+                true,
+                attacker.GameObject.transform);
+            
             var initPos = attacker.GameObject.transform.position;
             var initRot = attacker.GameObject.transform.rotation;
             
@@ -80,6 +87,8 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
 
             await attacker.GameObject.transform.DOMove(initPos, CloseCombatMoveDuration).ToUniTask(ct);
             attacker.GameObject.transform.rotation = initRot;
+            
+            _cameraController.ReturnToBack();
         }
 
         public async UniTask PlayMagicUseAsync(

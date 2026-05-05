@@ -3,6 +3,8 @@ using Game.Helpers.ZenjectHelpers;
 using Game.Scripts.Battle;
 using Game.Scripts.Battle.BattleAnimations.Implementations;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
+using Game.Scripts.Battle.CameraController.Implementations;
+using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Spells.Templates;
 using Game.Scripts.Battle.CharacterAnalyze.Implementations;
 using Game.Scripts.Battle.CharacterAnalyze.Interfaces;
@@ -35,6 +37,7 @@ namespace Game.Scripts.Contexts
         [SerializeField] private BattleAnimationsPlayer _battleAnimationsPlayer;
         [SerializeField] private PlayerPopupWindowCreator _popupWindow;
         [SerializeField] private BaseSpellAnimationsPlayer _baseSpellAnimations;
+        [SerializeField] private CameraController _cameraController;
         
         private readonly BattleStarter _battleStarter = new ();
         
@@ -46,6 +49,7 @@ namespace Game.Scripts.Contexts
             Container.Bind<ICharacterSelector>().FromInstance(_characterSelector).AsSingle();
             Container.Bind<IBattleAnimationsPlayer>().FromInstance(_battleAnimationsPlayer).AsSingle();
             Container.Bind<BaseSpellAnimationsPlayer>().FromInstance(_baseSpellAnimations).AsSingle();
+            Container.Bind<ICameraController>().FromInstance(_cameraController).AsSingle();
 
             BindTargetChoose();
             BindMarkLevelChooser();

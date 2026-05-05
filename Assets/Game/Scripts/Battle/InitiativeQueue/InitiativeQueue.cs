@@ -126,7 +126,7 @@ namespace Game.Scripts.Battle.InitiativeQueue
             if (_units.Count == 0)
                 return;
 
-            var ev = _pool.Get<TurnStartingEvent>().Init(_units[0]);
+            var ev = _pool.Get<TurnStartingEvent>().Init(_units[0], true);
             await _bus.Publish(ev, ct);
             _pool.Return(ev);
             
@@ -147,7 +147,7 @@ namespace Game.Scripts.Battle.InitiativeQueue
             
             _turnIndex = (_turnIndex + 1) % _units.Count;
             
-            var startEv = _pool.Get<TurnStartingEvent>().Init(_units[_turnIndex]);
+            var startEv = _pool.Get<TurnStartingEvent>().Init(_units[_turnIndex], false);
             await _bus.Publish(startEv, ct);
             _pool.Return(startEv);
             
