@@ -90,7 +90,6 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
             bool success = false;
             try
             {
-                Debug.Log("Start using action");
                 _usingAction = true;
                 success = await action.Use(ct);
             }
