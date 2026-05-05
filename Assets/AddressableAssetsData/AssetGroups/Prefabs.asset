@@ -119,7 +119,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 73cb97e101bb416499ec52e77aebcb72
-    m_Address: Assets/Game/Prefabs/Effects/Visual/SaveThrowEffect.prefab
+    m_Address: Assets/Game/Prefabs/Effects/Visual/BaseSaveThrowEffect.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Spell

@@ -693,7 +693,6 @@ GameObject:
   - component: {fileID: 328734179}
   - component: {fileID: 328734180}
   - component: {fileID: 328734181}
-  - component: {fileID: 328734182}
   - component: {fileID: 328734183}
   m_Layer: 0
   m_Name: BattleContext
@@ -748,7 +747,7 @@ MonoBehaviour:
   _playerMouseTargetChooser: {fileID: 328734179}
   _characterSelector: {fileID: 328734180}
   _battleAnimationsPlayer: {fileID: 328734181}
-  _popupWindow: {fileID: 328734182}
+  _popupWindow: {fileID: 910917305}
   _baseSpellAnimations: {fileID: 328734183}
 --- !u!114 &328734177
 MonoBehaviour:
@@ -840,29 +839,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &328734182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328734175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3143af1698694b1c89d69e40ca994577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _window: {fileID: 910917303}
-  _icon: {fileID: 1669004094}
-  _questionText: {fileID: 550380766}
-  _pool:
-    _container: {fileID: 1626485698}
-    _prefabReference:
-      m_AssetGUID: fca867fad0fe29046894aabcae533c44
-      m_SubObjectName: 
-      m_SubObjectGUID: 
-      m_SubObjectType: 
-      m_EditorAssetChanged: 0
 --- !u!114 &328734183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,7 +858,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   _saveThrowEffectReference:
-    m_AssetGUID: f16109555e6e8a54bba4cc2584a7af38
+    m_AssetGUID: 73cb97e101bb416499ec52e77aebcb72
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2412,6 +2388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910917304}
+  - component: {fileID: 910917305}
   m_Layer: 5
   m_Name: PopupWindow
   m_TagString: Untagged
@@ -2439,6 +2416,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &910917305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910917303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3143af1698694b1c89d69e40ca994577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _window: {fileID: 1196827047}
+  _icon: {fileID: 1669004094}
+  _questionText: {fileID: 550380766}
+  _pool:
+    _container: {fileID: 1626485698}
+    _prefabReference:
+      m_AssetGUID: fca867fad0fe29046894aabcae533c44
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
 --- !u!1 &917270877
 GameObject:
   m_ObjectHideFlags: 0
