@@ -8,17 +8,17 @@ namespace Game.Scripts.Events.Data
     {
         public readonly Func<T, CancellationToken, UniTask> Handler;
         public Predicate<T> Filter;
-        public EventStep Step;
+        public int Step;
         
-        private readonly Action<AsyncQueryableSubscription<T>, EventStep, EventStep> _stepChanged;
+        private readonly Action<AsyncQueryableSubscription<T>, int, int> _stepChanged;
 
         public AsyncQueryableSubscription(
             Func<T, CancellationToken, UniTask> handler,
-            Action<AsyncQueryableSubscription<T>, EventStep, EventStep> stepChanged)
+            Action<AsyncQueryableSubscription<T>, int, int> stepChanged)
         {
             Handler = handler;
             Filter = null;
-            Step = EventStep.ChangeValuesAndSetEffects;
+            Step = (int)EventStep.ChangeValuesAndSetEffects;
             _stepChanged = stepChanged;
         }
 
@@ -28,7 +28,9 @@ namespace Game.Scripts.Events.Data
             return this;
         }
 
-        public AsyncQueryableSubscription<T> On(EventStep step)
+        public AsyncQueryableSubscription<T> On(EventStep step) => On((int)step);
+
+        public AsyncQueryableSubscription<T> On(int step)
         {
             _stepChanged?.Invoke(this, Step, step);
             Step = step;

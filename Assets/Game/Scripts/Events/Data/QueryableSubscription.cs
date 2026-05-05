@@ -6,17 +6,17 @@ namespace Game.Scripts.Events.Data
     {
         public readonly Action<T> Handler;
         public Predicate<T> Filter;
-        public  EventStep Step;
+        public int Step;
         
-        private readonly Action<QueryableSubscription<T>, EventStep, EventStep> _stepChanged;
+        private readonly Action<QueryableSubscription<T>, int, int> _stepChanged;
 
         public QueryableSubscription(
             Action<T> handler,
-            Action<QueryableSubscription<T>, EventStep, EventStep> stepChanged)
+            Action<QueryableSubscription<T>, int, int> stepChanged)
         {
             Handler = handler;
             Filter = null;
-            Step = EventStep.ChangeValuesAndSetEffects;
+            Step = (int)EventStep.ChangeValuesAndSetEffects;
             _stepChanged = stepChanged;
         }
 
@@ -26,7 +26,9 @@ namespace Game.Scripts.Events.Data
             return this;
         }
 
-        public QueryableSubscription<T> On(EventStep step)
+        public QueryableSubscription<T> On(EventStep step) => On((int)step);
+
+        public QueryableSubscription<T> On(int step)
         {
             _stepChanged?.Invoke(this, Step, step);
             Step = step;
