@@ -131,7 +131,7 @@ namespace Game.Scripts.Battle.DamageDealing.Health.Implementations
             _died = true;
             var diedEv = _eventPool.Get<DiedEvent>().Init(_battleUnit);
             await _eventBus.Publish(diedEv, ct);
-            _eventPool.Return(dyingEv);
+            _eventPool.Return(diedEv);
             
             ct.ThrowIfCancellationRequested();
         }
