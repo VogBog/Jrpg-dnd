@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: _data._stats.Array.data[5].SaveThrow
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7781425766952507441, guid: 5f6442d10bfc64247b71c6854ec0f783, type: 3}
+      propertyPath: _iconReference.m_AssetGUID
+      value: cb0e53ac2f5dc8f4e982a8c215039dcb
+      objectReference: {fileID: 0}
     - target: {fileID: 8363813564835455850, guid: 5f6442d10bfc64247b71c6854ec0f783, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

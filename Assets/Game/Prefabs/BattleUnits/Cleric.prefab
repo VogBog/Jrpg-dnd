@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: _resourcesList.m_AssetGUID
       value: ad0efd77774fa8f4098154ab0d50b433
       objectReference: {fileID: 0}
+    - target: {fileID: 8373062508172956410, guid: 8d5690295da213144a83c411a98f06b7, type: 3}
+      propertyPath: _iconReference.m_AssetGUID
+      value: 6b8ecfc4dcab8b84abb6b10fa50100ce
+      objectReference: {fileID: 0}
     - target: {fileID: 8518684276001362720, guid: 8d5690295da213144a83c411a98f06b7, type: 3}
       propertyPath: _data.<SpellStat>k__BackingField
       value: 4

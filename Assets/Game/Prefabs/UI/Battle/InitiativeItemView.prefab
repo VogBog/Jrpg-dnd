@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9714fb9dc50a4419affb419d5753d7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 3025099390399639425}
   <Name>k__BackingField: {fileID: 4755416310286907903}
   <InitiativeMarker>k__BackingField: {fileID: 9174925626848424309}
   <InitiativeRollPanel>k__BackingField: {fileID: 7746805816614885157}

@@ -9,6 +9,7 @@ namespace Game.Scripts.Battle
     {
         string Name { get; }
         bool IsMyTurn { get; }
+        Sprite Icon { get; set; }
         
         DiContainer UnitContainer { get; }
         GameObject GameObject { get; }

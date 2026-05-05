@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 5fee4825a5da1714196a06f212720c4e
   m_currentHash:
     serializedVersion: 2
-    Hash: c0f079fa15fbccb9b17ed45387c19c1c
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
     - StatusEffect
     - VisualEffect
     - AnimationData
+    - Avatars
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: d036548a7a7008348bfdcb87a8f19764, type: 2}

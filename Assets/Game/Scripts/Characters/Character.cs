@@ -16,6 +16,7 @@ namespace Game.Scripts.Characters
         
         [SerializeField] private UnitTeams _team;
         
+        public Sprite Icon { get; set; }
         public bool IsMyTurn { get; private set; } = false;
         public string Name => "Character " + _team;
         

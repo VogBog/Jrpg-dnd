@@ -22,6 +22,18 @@ MonoBehaviour:
     - Battle
     - CharacterAction
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c59cc8f245584a4e8750bff8807a6da
+    m_Address: Assets/Game/Sprites/Avatars/fighter2.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Avatars
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e135a13b51018447b814193658fbf4b
+    m_Address: Assets/Game/Sprites/Avatars/goblinMage.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Avatars
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 20ead3d9ba14f644299de2c0ad5555f7
     m_Address: Assets/Game/Sprites/Damage/miniLighting.png
     m_ReadOnly: 0
@@ -100,6 +112,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - DamageType
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b8ecfc4dcab8b84abb6b10fa50100ce
+    m_Address: Assets/Game/Sprites/Avatars/cleric.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Avatars
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6dcee762b4bb07346a46dcb4186943ef
     m_Address: Assets/Game/Sprites/Damage/miniRadiance.png
     m_ReadOnly: 0
@@ -161,6 +179,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb0e53ac2f5dc8f4e982a8c215039dcb
+    m_Address: Assets/Game/Sprites/Avatars/goblin.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Avatars
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7d4016a58b32df44945d5a673bdf189
     m_Address: Assets/Game/Sprites/Spells/Contrips/maliciousMockery.png
@@ -246,6 +270,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DamageType
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffb35509c58ff1c4fbfc8352ce4e31ee
+    m_Address: Assets/Game/Sprites/Avatars/fighter1.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Avatars
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 63a18dae2aada014fa96da7593e6683b, type: 2}

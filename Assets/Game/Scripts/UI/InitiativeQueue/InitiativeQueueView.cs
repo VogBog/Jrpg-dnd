@@ -2,7 +2,9 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Game.Scripts.Battle;
 using Game.Scripts.Battle.InitiativeQueue;
+using Game.Scripts.Characters;
 using Game.Scripts.Scenes;
 using Game.Scripts.UI.Helpers;
 using UnityEngine;
@@ -92,6 +94,8 @@ namespace Game.Scripts.UI.InitiativeQueue
 
             itemView.InitiativeRollText.text = ev.ChangedUnit.Initiative.ToString();
             itemView.InitiativeRollPanel.gameObject.SetActive(true);
+
+            await LoadUnitIconAsync(itemView, ev.ChangedUnit.Unit, ct);
             
             itemView.gameObject.SetActive(true);
             itemView.transform.DOLocalMoveX(0f, _itemAnimationDuration);
@@ -105,6 +109,32 @@ namespace Game.Scripts.UI.InitiativeQueue
                     itemView.InitiativeRollPanel.transform.localPosition = oldPos;
                     itemView.InitiativeRollPanel.gameObject.SetActive(false);
                 });
+        }
+
+        private async UniTask LoadUnitIconAsync(InitiativeQueueViewItem viewItem, IBattleUnit unit, CancellationToken ct)
+        {
+            if (unit.Icon != null)
+            {
+                viewItem.Icon.sprite = unit.Icon;
+                return;
+            }
+
+            if (unit.GameObject.TryGetComponent(out CharacterIconLoader loader))
+            {
+                await UniTask.WaitWhile(() => loader.Loading, cancellationToken: ct);
+                viewItem.Icon.sprite = unit.Icon;
+                return;
+            }
+
+            for (int attempt = 0; attempt < 5; attempt++)
+            {
+                await UniTask.WaitForSeconds(0.2f, cancellationToken: ct);
+                if (unit.Icon != null)
+                {
+                    viewItem.Icon.sprite = unit.Icon;
+                    return;
+                }
+            }
         }
 
         private void InsertObjectInInitiativeOrder(InitiativeQueueViewItem item, int initiative)
