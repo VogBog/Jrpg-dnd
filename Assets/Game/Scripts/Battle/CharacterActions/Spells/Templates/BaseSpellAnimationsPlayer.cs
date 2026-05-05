@@ -16,7 +16,7 @@ namespace Game.Scripts.Battle.CharacterActions.Spells.Templates
     public class BaseSpellAnimationsPlayer : MonoBehaviour
     {
         [SerializeField] private AssetReferenceObject<BaseSpellProjectile> _projectileReference;
-        [SerializeField] private AssetReferenceObject<SaveThrowEffect> _saveThrowEffectReference;
+        [SerializeField] private AssetReferenceObject<BaseSaveThrowEffect> _saveThrowEffectReference;
         [SerializeField] private float _projectileHitTime;
         [SerializeField] private float _projectileOutTime;
 
@@ -38,7 +38,7 @@ namespace Game.Scripts.Battle.CharacterActions.Spells.Templates
         private void OnDestroy()
         {
             _pool.ReleasePrefab<BaseSpellProjectile>();
-            _pool.ReleasePrefab<SaveThrowEffect>();
+            _pool.ReleasePrefab<BaseSaveThrowEffect>();
         }
 
         public async UniTask AnimateProjectileAsync(
