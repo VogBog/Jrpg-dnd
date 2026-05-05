@@ -55,8 +55,12 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
 
             if (success)
             {
-                ev.RollingEvent.ChangeTarget(Owner);
-                await Use(ct);
+                bool used = await Use(ct);
+
+                if (used)
+                {
+                    ev.RollingEvent.ChangeTarget(Owner);
+                }
             }
         }
         

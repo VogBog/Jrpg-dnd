@@ -1,3 +1,5 @@
+using Game.Scripts.Battle;
+
 namespace Game.Scripts.Rolls.Data
 {
     public struct AttackRollResults
@@ -6,9 +8,11 @@ namespace Game.Scripts.Rolls.Data
         public bool Success;
         public bool CriticalHit;
         public bool CriticalMiss;
+        public IBattleUnit Target;
 
-        public AttackRollResults(int roll, bool success, bool criticalHit, bool criticalMiss)
+        public AttackRollResults(IBattleUnit target, int roll, bool success, bool criticalHit, bool criticalMiss)
         {
+            Target = target;
             Roll = roll;
             Success = success;
             CriticalHit = criticalHit;

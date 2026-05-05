@@ -121,7 +121,7 @@ namespace Game.Scripts.Rolls.Implementations
             if (rollingEvent.Cancelled)
             {
                 _pool.Return(rollingEvent);
-                return new AttackRollResults(0, false, false, true);
+                return new AttackRollResults(rollingEvent.Target, 0, false, false, true);
             }
             
             //Roll
@@ -221,7 +221,7 @@ namespace Game.Scripts.Rolls.Implementations
             await _bus.Publish(rolledEvent, ct);
 
             var attackResult = new AttackRollResults(
-                rolledEvent.Result, false, rolledEvent.CriticalHit, rolledEvent.CriticalMiss);
+                rollingEvent.Target, rolledEvent.Result, false, rolledEvent.CriticalHit, rolledEvent.CriticalMiss);
             
             //Set result
             if (rollingEvent.Target.GameObject.TryGetComponent(out Armor armor))

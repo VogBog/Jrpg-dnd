@@ -79,6 +79,7 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.DefaultActions
                 _weaponHolder,
                 ct);
 
+            _chosenTarget = attackRoll.Target;
             if (!attackRoll.Success || !_chosenTarget.GameObject.TryGetComponent(out IHealthProcessor health))
                 return;
             
