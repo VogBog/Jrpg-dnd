@@ -115,7 +115,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
             var command = new ChooseTargetCommand(TargetFilter.All(), 1);
             var targets = await _chooser.Choose(command, ct);
 
-            if (targets.Count == 0 || ct.IsCancellationRequested)
+            if (targets == null || targets.Count == 0 || ct.IsCancellationRequested)
                 return;
             
             Opened?.Invoke(_queue.Queue.Select(x => x.Unit));
