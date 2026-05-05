@@ -24,6 +24,7 @@ namespace Game.Scripts.Effects.VisualEffects
         [SerializeField] private Color _missColor;
         [SerializeField] private Color _criticalMissColor;
         [SerializeField] private Color _criticalHitColor;
+        [SerializeField] private Color _healColor;
 
         public const float YOffset = 0.5f;
         public const float SmallYOffset = 0.25f;
@@ -43,12 +44,14 @@ namespace Game.Scripts.Effects.VisualEffects
         {
             _bus.Subscribe<AttackPerformingEvent>(OnAttackPerforming).On(EventStep.SeeResults);
             _bus.Subscribe<TakenDamageEvent>(OnTakeDamage).On(EventStep.SeeResults);
+            _bus.Subscribe<HealingEvent>(OnHeal).On(EventStep.SeeResults);
         }
 
         private void OnDisable()
         {
             _bus.Unsubscribe<AttackPerformingEvent>(OnAttackPerforming);
             _bus.Unsubscribe<TakenDamageEvent>(OnTakeDamage);
+            _bus.Unsubscribe<HealingEvent>(OnHeal);
         }
 
         private void OnAttackPerforming(AttackPerformingEvent ev)
@@ -69,13 +72,19 @@ namespace Game.Scripts.Effects.VisualEffects
             
             if (_scope.TryGetToken(out var ct))
                 _scope.FireAndForgetDelayed(
-                    PopupDamageAsync(pos, ev.Command.DamageList, ct));
+                    PopupDamageAsync(pos, ev.Command.IsCritical, ev.Command.DamageList, ct));
 
             if (ev.Command.IsCritical)
             {
                 pos.y += SmallYOffset;
                 PopupText(pos, "CRITICAL HIT", _criticalHitColor);
             }
+        }
+
+        private void OnHeal(HealingEvent ev)
+        {
+            var pos = ev.Unit.GameObject.transform.position;
+            PopupText(pos, $"+{ev.Command.Heal}", _healColor);
         }
 
         private void PopupText(Vector3 position, string text, Color color)
@@ -91,11 +100,15 @@ namespace Game.Scripts.Effects.VisualEffects
             await effect.PopupAsync(text, color, ct);
         }
 
-        private async UniTask PopupDamageAsync(Vector3 position, RolledDamageList damage, CancellationToken ct)
+        private async UniTask PopupDamageAsync(Vector3 position, bool isCritical, RolledDamageList damage, CancellationToken ct)
         {
             foreach (var value in damage.Values)
             {
-                PopupTextForceAsync(position, value.Value.ToString(), value.DamageType.Color, ct).Forget();
+                int totalDamage = value.Value;
+                if (isCritical)
+                    totalDamage *= 2;
+                
+                PopupTextForceAsync(position, totalDamage.ToString(), value.DamageType.Color, ct).Forget();
             }
         }
 
