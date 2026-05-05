@@ -35,30 +35,21 @@ namespace Game.Scripts.Pool.Implementations
                 if (handle.IsValid()) handle.Release();
                 throw new OperationCanceledException();
             }
+
+            if (_prefabs.TryGetValue(typeof(T), out var newParameters))
+            {
+                newParameters.Item3++;
+                if (handle.IsValid()) handle.Release();
+                return;
+            }
             
             _prefabs.Add(typeof(T), (asset, handle, 1));
             _pool.Add(typeof(T), new Queue<object>());
         }
 
-        public async UniTask RegisterPrefab(Type type, AssetReferenceObject<Object> prefab, CancellationToken ct)
+        public UniTask RegisterPrefab(Type type, AssetReferenceObject<Object> prefab, CancellationToken ct)
         {
-            if (_prefabs.TryGetValue(type, out var parameters))
-            {
-                parameters.Item3++;
-                return;
-            }
-            
-            var handle = Addressables.LoadAssetAsync<Object>(prefab);
-            var asset = await handle.ToUniTask(cancellationToken: ct);
-
-            if (ct.IsCancellationRequested)
-            {
-                if (handle.IsValid()) handle.Release();
-                throw new OperationCanceledException();
-            }
-            
-            _prefabs.Add(type, (asset, handle, 1));
-            _pool.Add(type, new Queue<object>());
+            return RegisterPrefab(prefab, ct);
         }
 
         public async UniTask<T> Get<T>(CancellationToken ct)
