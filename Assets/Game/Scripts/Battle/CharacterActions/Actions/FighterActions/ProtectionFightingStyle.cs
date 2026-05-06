@@ -2,10 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using Game.Helpers.DOTweenExtensions;
 using Game.Scripts.Battle.CameraController.Data;
 using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Implementations;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
+using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Battle.PopupWindow.Data;
 using Game.Scripts.Battle.PopupWindow.Interfaces;
 using Game.Scripts.Battle.UnitsTeam;
@@ -20,6 +23,11 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
         [Inject] private IEventBus _bus;
         [Inject] private IPopupWindowCreator _popupWindow;
         [Inject] private ICameraController _cameraController;
+
+        private ProtectionFightingStyleSwapPositionsCommand _swapPositionsBack;
+        
+        public const float SwapPositionsTime = 0.5f;
+        public const float GoBackDistance = 2f;
         
         protected override async UniTask<bool> BeforeUse(CancellationToken ct)
         {
@@ -68,6 +76,19 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
                     targets.Remove(ev.RollingEvent.Target.GameObject.transform);
                     if (!targets.Contains(Owner.GameObject.transform))
                         targets.Add(Owner.GameObject.transform);
+
+                    _swapPositionsBack = new(
+                        ev.RollingEvent.Target.GameObject.transform,
+                        ev.RollingEvent.Target.GameObject.transform.position,
+                        Owner.GameObject.transform.position);
+
+                    _bus.Subscribe<TurnEndingEvent>(SwapPositionsBack);
+                    
+                    var newPos = ev.RollingEvent.Target.GameObject.transform.position;
+                    ev.RollingEvent.Target.GameObject.transform.DOMove(
+                        newPos - GoBackDistance * ev.RollingEvent.Target.GameObject.transform.forward,
+                        SwapPositionsTime);
+                    await Owner.GameObject.transform.DOMove(newPos, SwapPositionsTime).ToUniTask(ct);
                     
                     ev.RollingEvent.ChangeTarget(Owner);
                     _cameraController.SetTargets(follow, targets, false, ZoomType.Far);
@@ -76,5 +97,14 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
         }
         
         protected override List<IBattleUnit> GetTargets() => new List<IBattleUnit> { Owner };
+
+        private async UniTask SwapPositionsBack(TurnEndingEvent ev, CancellationToken ct)
+        {
+            _bus.Unsubscribe<TurnEndingEvent>(SwapPositionsBack);
+            
+            _swapPositionsBack.SwapWith.DOMove(_swapPositionsBack.TargetPosition, SwapPositionsTime);
+            await Owner.GameObject.transform.DOMove(_swapPositionsBack.MyPosition, SwapPositionsTime)
+                .ToUniTask(ct);
+        }
     }
 }
