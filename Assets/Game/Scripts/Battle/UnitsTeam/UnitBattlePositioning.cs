@@ -11,6 +11,7 @@ namespace Game.Scripts.Battle.UnitsTeam
         [SerializeField] private TeamPositions[] _positions;
         
         private IInitiativeQueue _initiativeQueue;
+        private readonly Dictionary<ITeamUnit, Vector3> _usedPositions = new(8);
 
         [Inject]
         private void Construct(IInitiativeQueue initiativeQueue)
@@ -18,7 +19,7 @@ namespace Game.Scripts.Battle.UnitsTeam
             _initiativeQueue = initiativeQueue;
         }
         
-        public Vector3? GetPositionForUnit(ITeamUnit teamUnit)
+        public Vector3? GetFreePositionForUnit(ITeamUnit teamUnit)
         {
             var team = teamUnit.GetTeam();
             var teamIndex = Array.FindIndex(_positions, x => x.Team == team);
@@ -37,6 +38,13 @@ namespace Game.Scripts.Battle.UnitsTeam
 
             _positions[teamIndex].Points[pointIndex].Target = teamUnit;
             return _positions[teamIndex].Points[pointIndex].Transform.position;
+        }
+
+        public Vector3? GetUsedPositionForUnit(ITeamUnit teamUnit)
+        {
+            if (_usedPositions.TryGetValue(teamUnit, out var position))
+                return position;
+            return null;
         }
 
         private void OnEnable()
@@ -64,9 +72,12 @@ namespace Game.Scripts.Battle.UnitsTeam
 
         private void SetPositionForUnit(ITeamUnit unit)
         {
-            var pos = GetPositionForUnit(unit);
+            var pos = GetFreePositionForUnit(unit);
             if (pos != null)
+            {
                 unit.SetBattlePosition(pos.Value);
+                _usedPositions.Add(unit, pos.Value);
+            }
         }
 
         

@@ -14,6 +14,7 @@ using Game.Scripts.Battle.PopupWindow.Interfaces;
 using Game.Scripts.Battle.UnitsTeam;
 using Game.Scripts.Events.Interfaces;
 using Game.Scripts.Rolls.Events;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
@@ -23,6 +24,7 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
         [Inject] private IEventBus _bus;
         [Inject] private IPopupWindowCreator _popupWindow;
         [Inject] private ICameraController _cameraController;
+        [Inject] private IUnitBattlePositioning _unitBattlePositioning;
 
         private ProtectionFightingStyleSwapPositionsCommand _swapPositionsBack;
         
@@ -79,8 +81,10 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
 
                     _swapPositionsBack = new(
                         ev.RollingEvent.Target.GameObject.transform,
-                        ev.RollingEvent.Target.GameObject.transform.position,
-                        Owner.GameObject.transform.position);
+                        _unitBattlePositioning.GetUsedPositionForUnit(
+                            UnitTeamsUtils.GetTeamUnit(ev.RollingEvent.Target)) ?? Vector3.zero,
+                        _unitBattlePositioning.GetUsedPositionForUnit(
+                            UnitTeamsUtils.GetTeamUnit(Owner)) ?? Vector3.zero);
 
                     _bus.Subscribe<TurnEndingEvent>(SwapPositionsBack);
                     
