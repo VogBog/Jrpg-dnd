@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Characters.ModularCharacters;
@@ -27,5 +28,11 @@ namespace Game.Scripts.Battle.BattleAnimations.Interfaces
             Transform target,
             Func<CancellationToken, UniTask> actionEvent,
             CancellationToken ct);
+
+        UniTask PlayUsingActionAnimation(
+            IBattleUnit actor,
+            IEnumerable<IBattleUnit> targets,
+            CancellationToken ct,
+            Func<CancellationToken, UniTask> inAnimation);
     }
 }

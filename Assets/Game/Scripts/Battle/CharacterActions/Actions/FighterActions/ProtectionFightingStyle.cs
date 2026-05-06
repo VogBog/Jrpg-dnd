@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Game.Scripts.Battle.CameraController.Data;
+using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Implementations;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.PopupWindow.Data;
@@ -16,6 +19,7 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
     {
         [Inject] private IEventBus _bus;
         [Inject] private IPopupWindowCreator _popupWindow;
+        [Inject] private ICameraController _cameraController;
         
         protected override async UniTask<bool> BeforeUse(CancellationToken ct)
         {
@@ -59,7 +63,14 @@ namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
 
                 if (used)
                 {
+                    var follow = _cameraController.Follow;
+                    var targets = _cameraController.Targets.ToList();
+                    targets.Remove(ev.RollingEvent.Target.GameObject.transform);
+                    if (!targets.Contains(Owner.GameObject.transform))
+                        targets.Add(Owner.GameObject.transform);
+                    
                     ev.RollingEvent.ChangeTarget(Owner);
+                    _cameraController.SetTargets(follow, targets, false, ZoomType.Far);
                 }
             }
         }

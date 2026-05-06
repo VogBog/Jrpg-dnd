@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -51,12 +53,6 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             Func<CancellationToken, UniTask> dealDamageEvent,
             CancellationToken ct)
         {
-            _cameraController.SetTargets(
-                defender.GameObject.transform,
-                true,
-                ZoomType.Far,
-                attacker.GameObject.transform);
-            
             var initPos = attacker.GameObject.transform.position;
             var initRot = attacker.GameObject.transform.rotation;
             
@@ -89,8 +85,6 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
 
             await attacker.GameObject.transform.DOMove(initPos, CloseCombatMoveDuration).ToUniTask(ct);
             attacker.GameObject.transform.rotation = initRot;
-            
-            _cameraController.ReturnToBack();
         }
 
         public async UniTask PlayMagicUseAsync(
@@ -134,6 +128,23 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             }
             
             user.GameObject.transform.rotation = initRot;
+        }
+
+        public async UniTask PlayUsingActionAnimation(
+            IBattleUnit actor,
+            IEnumerable<IBattleUnit> targets,
+            CancellationToken ct,
+            Func<CancellationToken, UniTask> inAnimation)
+        {
+            _cameraController.SetTargets(
+                actor.GameObject.transform,
+                targets.Select(x => x.GameObject.transform),
+                true,
+                ZoomType.Far);
+
+            await inAnimation.Invoke(ct);
+            
+            _cameraController.ReturnToBack();
         }
 
         private void OnEnable()

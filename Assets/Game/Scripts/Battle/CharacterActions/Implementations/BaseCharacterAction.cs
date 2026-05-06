@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Game.Scripts.Battle.CharacterActions.Events;
 
 namespace Game.Scripts.Battle.CharacterActions.Implementations
@@ -42,7 +41,5 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         {
             usedEvent.Clear();
         }
-
-        protected abstract List<IBattleUnit> GetTargets();
     }
 }

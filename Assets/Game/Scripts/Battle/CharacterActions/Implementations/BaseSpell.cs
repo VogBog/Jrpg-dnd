@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
@@ -38,8 +37,6 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         }
 
         protected abstract UniTask OnAnimatedUse(CancellationToken ct);
-
-        protected abstract List<IBattleUnit> GetTargets();
         
         protected override BeforeUsingSpellEvent SetBeforeUsingActionData(BeforeUsingSpellEvent beforeUseEvent)
         {

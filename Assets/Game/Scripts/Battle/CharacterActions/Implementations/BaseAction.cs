@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Game.Scripts.Battle.BattleAnimations.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Characters.CharacterResources.Data;
 using Game.Scripts.Characters.CharacterResources.DefaultResources;
@@ -23,6 +24,7 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         protected IEventPool EventPool;
         protected IEventBus EventBus;
         protected ICharacterResourceMarkLevelChooser MarkLevelChooser;
+        protected IBattleAnimationsPlayer BattleAnimations;
 
         [SerializeField] private AssetReferenceT<CharacterResourceData>[] _useResources;
         [SerializeField] private MarkedResourceRequirementSerializable[] _useMarkedResources;
@@ -36,12 +38,14 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
             IEventBus eventBus,
             ICharacterResourceMarkLevelChooser characterResourceMarkLevelChooser,
             IAsyncOperationScope scope,
-            IDataStorage storage)
+            IDataStorage storage,
+            IBattleAnimationsPlayer battleAnimations)
         {
             ResourcesHolder = battleUnit.GameObject.GetComponent<ICharacterResourcesHolder>();
             EventPool = eventPool;
             EventBus = eventBus;
             MarkLevelChooser = characterResourceMarkLevelChooser;
+            BattleAnimations = battleAnimations;
             
             if (scope.TryGetToken(out var ct))
                 scope.FireAndForget(LoadResources(storage, ct));
@@ -107,7 +111,11 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
                     .Use();
             }
 
-            await OnUse(ct);
+            await BattleAnimations.PlayUsingActionAnimation(
+                Owner,
+                GetTargets(),
+                ct,
+                OnUse);
 
             await InvokeActionUsed(ct);
             InUse = false;
@@ -118,6 +126,7 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         protected abstract UniTask<bool> BeforeUse(CancellationToken ct);
         protected abstract UniTask OnUse(CancellationToken ct);
         protected abstract void ClearDataAfterUse();
+        protected abstract List<IBattleUnit> GetTargets();
 
         private async UniTask LoadResources(IDataStorage storage, CancellationToken ct)
         {
