@@ -1,6 +1,10 @@
+using System;
 using System.Linq;
+using Game.Scripts.Battle.CameraController.Data;
 using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
+using Game.Scripts.Battle.TargetChooser.Data;
+using Game.Scripts.Battle.TargetChooser.Interfaces;
 using Game.Scripts.Battle.UnitsTeam;
 using Game.Scripts.Events.Interfaces;
 using UnityEngine;
@@ -13,16 +17,21 @@ namespace Game.Scripts.Battle.CameraController.Implementations
         [Inject] private IInitiativeQueue _queue;
         [Inject] private IEventBus _bus;
         [Inject] private ICameraController _cameraController;
+        [Inject] private IPlayerTargetChooser _targetChooser;
 
         private void OnEnable()
         {
             _queue.UnitAdded += OnUnitAddedToInitiative;
+            _targetChooser.SelectionStarted += OnSelectionStarted;
+            _targetChooser.SelectionEnded += OnSelectionEnded;
             _bus.Subscribe<TurnStartingEvent>(OnTurnStarted);
         }
 
         private void OnDisable()
         {
             _queue.UnitAdded -= OnUnitAddedToInitiative;
+            _targetChooser.SelectionStarted -= OnSelectionStarted;
+            _targetChooser.SelectionEnded -= OnSelectionEnded;
             _bus.Unsubscribe<TurnStartingEvent>(OnTurnStarted);
         }
 
@@ -70,8 +79,29 @@ namespace Game.Scripts.Battle.CameraController.Implementations
             }
             
             _cameraController.ReturnToBack();
-            _cameraController.SetTargets(follow, targets.Select(x => x.GameObject.transform), true);
+            _cameraController.SetTargets(
+                follow,
+                targets.Select(x => x.GameObject.transform),
+                true,
+                ZoomType.Close);
+            
             UnityEngine.Pool.ListPool<IBattleUnit>.Release(targets);
+        }
+
+        private void OnSelectionStarted(ChooseTargetCommand command)
+        {
+            var targets = _queue.Queue
+                .Where(x =>
+                    command.Filter.GetMaskForPlayer().HasTeam(UnitTeamsUtils.GetTeam(x.Unit)))
+                .Select(x => x.Unit.GameObject.transform);
+            
+            _cameraController.SetTargets(
+                Array.Empty<Transform>(), targets, true, ZoomType.Far);
+        }
+
+        private void OnSelectionEnded()
+        {
+            _cameraController.ReturnToBack();
         }
     }
 }

@@ -16,9 +16,16 @@ namespace Game.Scripts.Battle.CameraController.Implementations
         {
             var followUnit = follow.FirstOrDefault();
             var targetUnit = targets.FirstOrDefault();
+
+            if (followUnit == null)
+            {
+                base.SetTargets(follow, targets, saveCommand, zoomType);
+                return;
+            }
+            
             var followTeam = UnitTeamsUtils.GetTeam(followUnit.GetComponent<ITeamUnit>());
 
-            if (followUnit != null && targetUnit != null &&
+            if (targetUnit != null &&
                 followTeam is UnitTeams.Enemy)
             {
                 base.SetTargets(targets, follow, saveCommand, zoomType);
