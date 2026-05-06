@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2274583491701502472, guid: 8d5690295da213144a83c411a98f06b7, type: 3}
+      propertyPath: <Name>k__BackingField
+      value: Cleric
+      objectReference: {fileID: 0}
     - target: {fileID: 2361488380973402250, guid: 8d5690295da213144a83c411a98f06b7, type: 3}
       propertyPath: m_IsActive
       value: 1

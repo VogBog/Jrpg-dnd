@@ -3,11 +3,13 @@ using Game.Scripts.Battle.DamageDealing.Damage;
 using Game.Scripts.Battle.DamageDealing.Health.Data;
 using Game.Scripts.Battle.StatusEffects.Interfaces;
 using Game.Scripts.Characters.Stats.Data;
+using UnityEngine;
 
 namespace Game.Scripts.UI.CharacterAnalyze
 {
     public readonly struct CharacterAnalyzeRedrawData
     {
+        public readonly Sprite Avatar;
         public readonly string Name;
         public readonly int Health;
         public readonly int MaxHealth;
@@ -20,6 +22,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
         public readonly bool InfiniteArmor;
 
         public CharacterAnalyzeRedrawData(
+            Sprite avatar,
             string name,
             int health,
             int maxHealth,
@@ -30,6 +33,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
             bool infiniteHealth = false,
             bool infiniteArmor = false)
         {
+            Avatar = avatar;
             Name = name;
             Health = health;
             MaxHealth = maxHealth;

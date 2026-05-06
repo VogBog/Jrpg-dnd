@@ -88,6 +88,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
                     _statusEffects.Changed += OnStatusEffectChanged;
 
                 var data = new CharacterAnalyzeRedrawData(
+                    _unit.Icon,
                     _unit.Name,
                     _health?.Value ?? 0,
                     _health?.MaxValue ?? 0,

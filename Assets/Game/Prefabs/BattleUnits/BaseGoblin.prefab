@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _team
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 26682804676409539, guid: 5f6442d10bfc64247b71c6854ec0f783, type: 3}
+      propertyPath: <Name>k__BackingField
+      value: Goblin
+      objectReference: {fileID: 0}
     - target: {fileID: 75743180147251276, guid: 5f6442d10bfc64247b71c6854ec0f783, type: 3}
       propertyPath: m_IsActive
       value: 1

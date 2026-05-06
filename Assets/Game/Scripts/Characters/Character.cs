@@ -18,7 +18,7 @@ namespace Game.Scripts.Characters
         
         public Sprite Icon { get; set; }
         public bool IsMyTurn { get; private set; } = false;
-        public string Name => "Character " + _team;
+        [field: SerializeField] public string Name { get; private set; }
         
         public DiContainer UnitContainer { get; private set; }
 

@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4955393797236211867, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
+      propertyPath: <Name>k__BackingField
+      value: Goblin Witch
+      objectReference: {fileID: 0}
     - target: {fileID: 5923325966026099059, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8

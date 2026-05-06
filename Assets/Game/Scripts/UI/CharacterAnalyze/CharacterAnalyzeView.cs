@@ -25,6 +25,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
         [SerializeField] private GameObject _window;
         [SerializeField] private GameObject _openButton;
         [SerializeField] private UIObjectsPool<CharacterAnalyzeQueueItem> _pool;
+        [SerializeField] private Image _avatarImage;
         [SerializeField] private TMP_Text _nameText;
         [SerializeField] private TMP_Text _healthText;
         [SerializeField] private Image _healthSlider;
@@ -112,6 +113,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
                 var item = await _pool.GetAsync(ct);
                 item.gameObject.SetActive(true);
                 item.Target = unit;
+                item.Image.sprite = unit.Icon;
             }
         }
 
@@ -132,6 +134,7 @@ namespace Game.Scripts.UI.CharacterAnalyze
             _nameText.text = data.Name;
             _healthText.text =  "Invincible";
             _armorText.text = data.InfiniteArmor ? "Invincible" : data.Armor.ToString();
+            _avatarImage.sprite = data.Avatar;
             
             if (!data.InfiniteHealth)
                 OnHealthChanged(data.Health, data.MaxHealth);
