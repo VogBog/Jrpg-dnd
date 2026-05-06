@@ -37,8 +37,6 @@
 3. Открыть сцену Assets/Game/Scenes/BattleScene.unity.
 4. Нажать Play.
 
-Важно: в ProjectSettings/EditorBuildSettings.asset сейчас подключена только Assets/Scenes/SampleScene.unity. Для сборки демо нужно добавить игровые сцены из Assets/Game/Scenes в Build Settings / Build Profiles.
-
 ## Технологии
 
 - Unity 6000.0.32f1
