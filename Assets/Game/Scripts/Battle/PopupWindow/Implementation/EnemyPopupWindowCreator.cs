@@ -15,7 +15,7 @@ namespace Game.Scripts.Battle.PopupWindow.Implementation
                 return (false, default);
 
             int cancelRandom = Random.Range(0, 100);
-            if (cancelRandom > 100)
+            if (cancelRandom > 70)
                 return (false, default);
             
             int randIndex = Random.Range(0, options.Count);
