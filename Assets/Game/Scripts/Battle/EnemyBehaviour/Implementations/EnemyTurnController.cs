@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Game.Scripts.Battle.CharacterActions.Implementations;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Battle.UnitsTeam;
@@ -58,8 +59,7 @@ namespace Game.Scripts.Battle.EnemyBehaviour.Implementations
             {
                 var allActions = actions
                     .GetAllActions()
-                    .OfType<IActiveAction>()
-                    .Where(x => x.CanUse())
+                    .Where(x => x.CanUse() && x is not IPassiveEffect)
                     .ToList();
 
                 if (allActions.Count == 0)

@@ -21,6 +21,7 @@ namespace Game.Scripts.Battle.CharacterActions.Interfaces
         bool CanUseActions();
         
         UniTask<bool> TryUse(Object prefab, CancellationToken ct);
-        UniTask<bool> TryUse(IActiveAction action, CancellationToken ct);
+        UniTask<bool> TryUse(ICharacterAction action, CancellationToken ct);
+        UniTask<bool> UseForce(ICharacterAction action, CancellationToken ct);
     }
 }

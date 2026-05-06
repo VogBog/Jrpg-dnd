@@ -70,7 +70,7 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
             return true;
         }
         
-        public async UniTask<bool> Use(CancellationToken ct)
+        public override async UniTask<bool> Use(CancellationToken ct)
         {
             InUse = true;
 

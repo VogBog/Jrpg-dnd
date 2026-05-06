@@ -6,8 +6,6 @@ using Game.Scripts.Battle.CharacterActions.Implementations;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Battle.UnitsTeam;
-using Game.Scripts.Characters.CharacterResources.DefaultResources;
-using Game.Scripts.Characters.CharacterResources.Interfaces;
 using UnityEngine;
 using Zenject;
 
@@ -113,7 +111,7 @@ namespace Game.Scripts.UI.BattleActionsScreen.ModelView
             yield return new BattleActionsPage("All", x => true);
             
             yield return new BattleActionsPage("Actions",
-                x => x is IActiveAction and not IPassiveEffect and not BaseSpell);
+                x => x is not IPassiveEffect and not BaseSpell);
 
             yield return new BattleActionsPage("Spells",
                 x => x is BaseSpell and not IPassiveEffect);

@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.CharacterActions.Implementations;
-using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Characters.CharacterResources.DefaultResources;
 using Game.Scripts.DataStorage.FreqDataStorage;
@@ -13,7 +12,7 @@ using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
 {
-    public class ActionSurgeAction : BaseCharacterAction, IActiveAction
+    public class ActionSurgeAction : BaseCharacterAction
     {
         [Inject] private IDataStorage _storage;
         [Inject] private IEventBus _bus;

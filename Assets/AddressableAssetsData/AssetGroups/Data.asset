@@ -388,6 +388,12 @@ MonoBehaviour:
     - Battle
     - CharacterResource
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: febfdcabfecd8f5419135508396214b7
+    m_Address: Assets/Game/Data/EnemyActions/CounterAttackAction.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ffc94a1f17acb8346b3c21d2096e65ee
     m_Address: Assets/Game/Data/Spells/HolyFire.prefab
     m_ReadOnly: 0

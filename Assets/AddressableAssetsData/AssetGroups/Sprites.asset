@@ -168,6 +168,12 @@ MonoBehaviour:
     - Battle
     - CharacterAction
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a411d2b866c049241a5539615fef8f8e
+    m_Address: Assets/Game/Sprites/Actions/counterAttack.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CharacterAction
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3f0363459dd68b41ab0d3c129508094
     m_Address: Assets/Game/Sprites/Spells/Level 1/guidanceRay.png
     m_ReadOnly: 0

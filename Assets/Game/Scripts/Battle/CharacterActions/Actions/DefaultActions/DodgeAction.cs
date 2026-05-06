@@ -3,7 +3,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Helpers.AddressablesHelpers;
 using Game.Scripts.Battle.CharacterActions.Implementations;
-using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.StatusEffects.Data;
 using Game.Scripts.Battle.StatusEffects.Effects;
 using Game.Scripts.Battle.StatusEffects.Interfaces;
@@ -13,7 +12,7 @@ using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Actions.DefaultActions
 {
-    public class DodgeAction : BaseCharacterAction, IActiveAction
+    public class DodgeAction : BaseCharacterAction
     {
         [Inject] private IDataStorage _dataStorage;
         

@@ -72,22 +72,28 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         public async UniTask<bool> TryUse(Object prefab, CancellationToken ct)
         {
             if (!_actions.TryGetValue(prefab, out var value) ||
-                value.Item1 is not IActiveAction activeAction)
+                value.Item1 is not IPassiveEffect)
                 return false;
 
-            return await TryUse(activeAction, ct);
+            return await TryUse(value.Item1, ct);
         }
 
-        public async UniTask<bool> TryUse(IActiveAction action, CancellationToken ct)
+        public async UniTask<bool> TryUse(ICharacterAction action, CancellationToken ct)
+        {
+            if (!CanUseActions() || !action.CanUse())
+                return false;
+
+            return await UseForce(action, ct);
+        }
+
+        public async UniTask<bool> UseForce(ICharacterAction action, CancellationToken ct)
         {
             if (action.Owner != _ownerUnit)
                 throw new Exception($"CharacterActionsHolder.TryUse: cannot use {action} with other owner. " +
                                     $"Owner of action is {action.Owner} while owner of holder is {_ownerUnit}");
             
-            if (!CanUseActions() || !action.CanUse())
-                return false;
-
             bool success = false;
+            bool oldUsingAction = _usingAction;
             try
             {
                 _usingAction = true;
@@ -95,7 +101,7 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
             }
             finally
             {
-                _usingAction = false;
+                _usingAction = oldUsingAction;
             }
 
             return success;

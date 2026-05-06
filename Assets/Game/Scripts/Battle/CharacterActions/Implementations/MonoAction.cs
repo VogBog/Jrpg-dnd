@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Characters.CharacterResources.DefaultResources;
@@ -17,9 +18,10 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
         public Sprite Icon { get; private set; }
         
         public IBattleUnit Owner { get; private set; }
-        
+
         public IEnumerable<CharacterResourceData> UseResources { get; protected set; }
         public IEnumerable<MarkedResourceRequirementSerializable> UseMarkedResources { get; protected set; }
+        public bool InUse { get; }
 
         [Inject]
         private void Construct(IBattleUnit owner, IAsyncOperationScope scope)
@@ -28,6 +30,8 @@ namespace Game.Scripts.Battle.CharacterActions.Implementations
             if (scope.TryGetToken(out _))
                 scope.FireAndForget(Map());
         }
+
+        public abstract UniTask<bool> Use(CancellationToken ct);
 
         public abstract bool CanUse();
 

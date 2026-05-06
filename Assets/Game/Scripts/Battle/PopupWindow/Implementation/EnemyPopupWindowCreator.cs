@@ -14,9 +14,11 @@ namespace Game.Scripts.Battle.PopupWindow.Implementation
             if (options == null || options.Count == 0)
                 return (false, default);
 
-            int randIndex = Random.Range(0, options.Count + 1);
-            if (randIndex == options.Count)
+            int cancelRandom = Random.Range(0, 100);
+            if (cancelRandom > 100)
                 return (false, default);
+            
+            int randIndex = Random.Range(0, options.Count);
             
             return (true, options[randIndex]);
         }

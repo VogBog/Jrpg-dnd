@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: _actions.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: _actions.Array.data[2].m_AssetGUID
@@ -21,12 +21,20 @@ PrefabInstance:
       value: e058b37853b9d58428f92f1fb68c7a84
       objectReference: {fileID: 0}
     - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
+      propertyPath: _actions.Array.data[4].m_AssetGUID
+      value: febfdcabfecd8f5419135508396214b7
+      objectReference: {fileID: 0}
+    - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: _actions.Array.data[2].m_EditorAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: _actions.Array.data[3].m_EditorAssetChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 83294077366548730, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
+      propertyPath: _actions.Array.data[4].m_EditorAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167951325202614280, guid: 7e64997c8d6b95746810e7f4bdd508ee, type: 3}
       propertyPath: m_IsActive

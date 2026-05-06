@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.CharacterActions.Implementations;
-using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.DamageDealing.Health.Data;
 using Game.Scripts.Battle.DamageDealing.Health.Interfaces;
 using Game.Scripts.Battle.StatusEffects.Data;
@@ -19,7 +18,7 @@ using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Spells.Templates
 {
-    public class SimpleSpellTemplate : BaseSpell, IActiveAction
+    public class SimpleSpellTemplate : BaseSpell
     {
         [Inject] private IBattleUnit _unit;
         [Inject] private ICheckRoller _checkRoller;

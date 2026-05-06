@@ -1,3 +1,4 @@
+using Game.Scripts.Battle.CharacterActions.Implementations;
 using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Scenes;
@@ -59,11 +60,11 @@ namespace Game.Scripts.UI.BattleActionsScreen.Controller
 
             if (!unit.GameObject.TryGetComponent(out ICharacterActionsHolder actionsHolder) ||
                 !actionsHolder.CanUseActions() ||
-                action is not IActiveAction activeAction)
+                action is IPassiveEffect)
                 return;
 
             if (_scope.TryGetToken(out var ct))
-                _scope.FireAndForget(actionsHolder.TryUse(activeAction, ct));
+                _scope.FireAndForget(actionsHolder.TryUse(action, ct));
         }
 
         private void OnItemHovered(ICharacterAction action)

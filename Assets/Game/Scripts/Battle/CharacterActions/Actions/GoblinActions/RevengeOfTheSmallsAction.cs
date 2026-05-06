@@ -3,7 +3,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Implementations;
-using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.InitiativeQueue;
 using Game.Scripts.Battle.StatusEffects.Data;
 using Game.Scripts.Battle.StatusEffects.Interfaces;
@@ -14,7 +13,7 @@ using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Actions.GoblinActions
 {
-    public class RevengeOfTheSmallsAction : BaseCharacterAction, IActiveAction
+    public class RevengeOfTheSmallsAction : BaseCharacterAction
     {
         [Inject] private IInitiativeQueue _queue;
         [Inject] private IBattleAnimationsPlayer _animations;

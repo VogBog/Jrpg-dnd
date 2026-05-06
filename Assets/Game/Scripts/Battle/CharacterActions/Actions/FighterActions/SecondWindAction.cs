@@ -3,7 +3,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
 using Game.Scripts.Battle.CharacterActions.Implementations;
-using Game.Scripts.Battle.CharacterActions.Interfaces;
 using Game.Scripts.Battle.DamageDealing.Health.Data;
 using Game.Scripts.Battle.DamageDealing.Health.Interfaces;
 using Game.Scripts.Characters.ModularCharacters;
@@ -13,7 +12,7 @@ using Zenject;
 
 namespace Game.Scripts.Battle.CharacterActions.Actions.FighterActions
 {
-    public class SecondWindAction : BaseCharacterAction, IActiveAction
+    public class SecondWindAction : BaseCharacterAction
     {
         [Inject] private IBattleAnimationsPlayer _animations;
         [Inject] private ICheckRoller _checkRoller;

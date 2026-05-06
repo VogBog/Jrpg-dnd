@@ -14,6 +14,7 @@ using Game.Scripts.Events.Interfaces;
 using Game.Scripts.Rolls.Data;
 using Game.Scripts.Rolls.Events;
 using Game.Scripts.Rolls.Interfaces;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Scripts.Rolls.Implementations
