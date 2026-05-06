@@ -70,6 +70,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - CharacterAction
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a6aa9fa12ca52f40a6b50bc06fd7e04
+    m_Address: Assets/Game/Sprites/UIIcons/cancel.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c9aeb7b60404614191376ebf2f70ffd
     m_Address: Assets/Game/Sprites/Damage/miniHammer.png
     m_ReadOnly: 0
@@ -93,6 +99,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Spell
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fba2e38a1a744a4f999533fc2183f96
+    m_Address: Assets/Game/Sprites/UIIcons/ok.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68d9286895e304943a7922166513f123
     m_Address: Assets/Game/Sprites/Spells/Level 2/shelter.png
