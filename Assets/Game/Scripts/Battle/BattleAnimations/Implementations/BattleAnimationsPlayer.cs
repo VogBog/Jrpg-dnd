@@ -152,6 +152,7 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             _queue.UnitAdded += OnUnitAdded;
             _bus.Subscribe<DiedEvent>(OnUnitDied).On(EventStep.CancelEffects);
             _bus.Subscribe<AttackPerformingEvent>(OnUnitAttacked).On(EventStep.SeeResults);
+            _bus.Subscribe<TakenDamageEvent>(OnGetDamage).On(EventStep.SeeResults);
         }
 
         private void OnDisable()
@@ -165,6 +166,7 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             {
                 _bus.Unsubscribe<DiedEvent>(OnUnitDied);
                 _bus.Unsubscribe<AttackPerformingEvent>(OnUnitAttacked);
+                _bus.Unsubscribe<TakenDamageEvent>(OnGetDamage);
             }
         }
 
@@ -224,6 +226,12 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
                 animator.Die();
                 await UniTask.WaitForSeconds(3f, cancellationToken: ct);
             }
+        }
+
+        private void OnGetDamage(TakenDamageEvent ev)
+        {
+            var animator = ev.Unit.UnitContainer.TryResolve<IBattleUnitAnimator>();
+            animator?.Hit();
         }
     }
 }
