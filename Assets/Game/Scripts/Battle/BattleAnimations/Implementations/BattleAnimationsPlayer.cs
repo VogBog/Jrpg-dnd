@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Helpers.DOTweenExtensions;
 using Game.Scripts.Battle.BattleAnimations.Interfaces;
+using Game.Scripts.Battle.CameraController.Data;
 using Game.Scripts.Battle.CameraController.Interfaces;
 using Game.Scripts.Battle.DamageDealing.Health.Events;
 using Game.Scripts.Battle.InitiativeQueue;
@@ -53,6 +54,7 @@ namespace Game.Scripts.Battle.BattleAnimations.Implementations
             _cameraController.SetTargets(
                 defender.GameObject.transform,
                 true,
+                ZoomType.Far,
                 attacker.GameObject.transform);
             
             var initPos = attacker.GameObject.transform.position;

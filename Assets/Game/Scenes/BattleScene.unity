@@ -5663,7 +5663,7 @@ MonoBehaviour:
   FramingMode: 2
   FramingSize: 0.8
   CenterOffset: {x: 0, y: 0}
-  Damping: 2
+  Damping: 1
   SizeAdjustment: 2
   LateralAdjustment: 0
   FovRange: {x: 1, y: 100}
@@ -5681,7 +5681,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f72f004f7a43a8ac34ad718ba239bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _framing: {fileID: 2131209148}
   _targetsGroup: {fileID: 941473762}
+  _zoomValues:
+  - Type: 0
+    Value: 1.2
+  - Type: 1
+    Value: 0.8
+  - Type: 2
+    Value: 0.4
 --- !u!114 &2131209150
 MonoBehaviour:
   m_ObjectHideFlags: 0
